@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white
+}
+
+@keyframes fadeIn1 {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    animation: fadeIn1 5s;
+}
+

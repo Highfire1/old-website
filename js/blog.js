@@ -2,7 +2,8 @@
 posts = [
     {"Welcome!": "posts/post1.html"},
     {"About": "posts/post3.html"},
-    {"Post2": "posts/post2.html"},
+    {"Geopolitics" : "posts/post4.html"},
+    {"Volcano Profile" : "posts/post5.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

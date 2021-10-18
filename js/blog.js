@@ -5,6 +5,8 @@ posts = [
     {"Geopolitics" : "posts/post4.html"},
     {"Volcano Profile" : "posts/post5.html"},
     {"Taipei 101" : "posts/post6.html"},
+    {"Age of ||||||" : "posts/post7.html"},
+    {"☕" : "posts/post8.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

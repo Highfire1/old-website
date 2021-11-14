@@ -59,5 +59,31 @@ populateSidebar()
 function populatePost(url) {
     let postContent = document.getElementById("postcontent")
     postContent.src = url
+
+
 }
 populatePost("posts/post1.html")
+
+
+var theme = "dark"
+toggleTheme()
+
+function toggleTheme() {
+    console.log(document.styleSheets)
+
+    switch (theme) {
+        case "dark":
+            document.styleSheets[1].disabled = true
+            document.styleSheets[2].disabled = false
+            theme = "light"
+            break // don't fall through to other case
+
+        case "light":
+            document.styleSheets[1].disabled = false
+            document.styleSheets[2].disabled = true
+            theme = "dark"
+    }
+}
+
+let themeButton = document.getElementById("toggleTheme")
+themeButton.addEventListener("click", toggleTheme)

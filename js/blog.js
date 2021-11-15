@@ -10,6 +10,7 @@ posts = [
     {"thermocline!" : "posts/post9.html"},
     {"blue gold notes" : "posts/post10.html"},
     {"bodies of water" : "posts/post11.html"},
+    {"remembrance day 🎖" : "posts/post11.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

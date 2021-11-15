@@ -77,5 +77,19 @@ body {
     width: 100%;
 }
 
+blockquote {
+    background: white;
+    padding: 20px 30px 20px 30px;
+    margin: 50px auto;
+    width: 50%;
+    max-width: 500px;
+}
 
-
+.stacked {
+  border: solid 2px;
+  padding: 20px 30px 20px 30px;
+  box-shadow: 13px 13px 0 0 white,
+              15px 15px 0 0 #0000FF,
+              15px 11px 0 0 #0000FF,
+              11px 15px 0 0 #0000FF;
+}

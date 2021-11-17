@@ -12,6 +12,7 @@ posts = [
     {"bodies of water" : "posts/post11.html"},
     {"remembrance day 🎖" : "posts/post12.html"},
     {"an interlude 🌧️" : "posts/post13.html"},
+    {"five themes of geography" : "posts/post14.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

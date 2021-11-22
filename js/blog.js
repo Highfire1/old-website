@@ -13,6 +13,7 @@ posts = [
     {"remembrance day 🎖" : "posts/post12.html"},
     {"an interlude 🌧️" : "posts/post13.html"},
     {"five themes of geography" : "posts/post14.html"},
+    {"Cloud Seeding." : "./custom/seed.html"}
 ]
 
 let button = document.getElementById("toggleSidebar")
@@ -55,14 +56,25 @@ function populateSidebar() {
 
         post.addEventListener("click", function() {
             populatePost(post.id)
+
+            if(post.id == "./custom/seed.html") {
+                magic()
+            } 
         })
 
         sidebar.append(post)
     }
 }
 
-populateSidebar()
+function magic() {
+    toggleSidebar()
+    document.getElementById("toggleTheme").remove()
+    document.getElementById("blogname").textContent = ""
+    document.getElementById("header").style.width = "45px"
+}
 
+
+populateSidebar()
 
 
 function populatePost(url) {

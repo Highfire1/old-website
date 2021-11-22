@@ -1,0 +1,33 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+body {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+
+    color: black;
+    background-color: rgb(243, 243, 243);
+
+    animation: fadeIn 10s forwards;
+  }
+
+h1 {
+  color: black;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}   

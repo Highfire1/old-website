@@ -14,7 +14,7 @@ body {
     color: black;
     background-color: rgb(243, 243, 243);
 
-    animation: fadeIn 10s forwards;
+    animation: fadeIn 5s forwards;
   }
 
 h1 {

@@ -13,7 +13,8 @@ posts = [
     {"remembrance day 🎖" : "posts/post12.html"},
     {"an interlude 🌧️" : "posts/post13.html"},
     {"five themes of geography" : "posts/post14.html"},
-    {"Cloud Seeding." : "./custom/seed/seed.html"}
+    {"Cloud Seeding." : "./custom/seed/seed.html"},
+    {"testing..." : "./custom/seed/shop.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

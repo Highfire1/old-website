@@ -14,7 +14,7 @@ posts = [
     {"an interlude 🌧️" : "posts/post13.html"},
     {"five themes of geography" : "posts/post14.html"},
     {"Cloud Seeding." : "./custom/seed/seed.html"},
-    {"testing..." : "./custom/seed/shop.html"},
+    {"testing..." : "./custom/shop/shop.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")
@@ -58,7 +58,7 @@ function populateSidebar() {
         post.addEventListener("click", function() {
             populatePost(post.id)
 
-            if(post.id == "./custom/seed.html") {
+            if(post.id == "./custom/seed/seed.html") {
                 magic()
             } 
         })

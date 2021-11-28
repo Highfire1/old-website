@@ -4,11 +4,15 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-.grid {
+#grid {
   display: grid;
   grid-template-columns: 15% 15% 15% 15% 15%;
   grid-gap: 10px;
   color: #444;
+  width: 66%;
+  background-color: grey;
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .item {
@@ -16,6 +20,45 @@ body {
   color: #fff;
   border-radius: 5px;
   padding: 5px;
+  margin: 10px;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#purchasesdiv {
+  background-color: grey;
+  border-radius: 5px;
+  margin: 10px;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchases {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+
+#purchasesfooter {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+}
+
+.pbottom {
+  flex: 1;
+}
+
+
+
+.green {
+  background-color: green;
 }
 
 img {

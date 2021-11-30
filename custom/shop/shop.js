@@ -110,6 +110,7 @@ function reloadAll() {
 document.getElementById("pcheckout").addEventListener("click", checkout);
 reloadAll()
 
+// download setup
 document.getElementById("download").addEventListener("click", function() {
     // Thanks, stackoverflow
     let csvContent = "data:text/csv;charset=utf-8,";
@@ -121,8 +122,5 @@ document.getElementById("download").addEventListener("click", function() {
     let link = document.getElementById("download")
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", "my_data.csv");
-    document.body.appendChild(link); // Required for FF
-
-    link.click(); // This will download the data file named "my_data.csv".
 })
 

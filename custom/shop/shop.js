@@ -120,7 +120,6 @@ function reloadAll() {
 
 
 document.getElementById("pcheckout").addEventListener("click", checkout);
-reloadAll()
 
 var today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -129,3 +128,4 @@ let yyyy = today.getFullYear();
 
 today = mm + '/' + dd + '/' + yyyy;
 
+reloadAll()

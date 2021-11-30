@@ -67,5 +67,7 @@ img {
   max-height: 100%;
 }
 
-a:active { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 

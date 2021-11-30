@@ -42,9 +42,9 @@ function reloadGrid() {
         
         div.id = i;
         div.addEventListener("click", function() {
-        items[this.id][4] += 1
-        reloadAll()
-        //item.textContent = items[this.id][0] + " | $" + items[this.id][2] + " | " + items[this.id][3]
+            items[this.id][4] += 1
+            reloadAll()
+            //item.textContent = items[this.id][0] + " | $" + items[this.id][2] + " | " + items[this.id][3]
         })
 
         div.classList.add("item")
@@ -71,6 +71,10 @@ function reloadCart() {
         item.textContent = items[i][0] + " " + items[i][4]
 
         item.classList.add("item")
+        item.addEventListener("click", function() {
+            items[this.id][4] -= 1
+            reloadAll()
+        })
         newcart.appendChild(item)
         
         cost += items[i][2] * items[i][4]

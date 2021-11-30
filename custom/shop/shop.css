@@ -29,7 +29,7 @@ body {
 }
 
 .item:focus {
-  animation: blinker 1s alternate;
+  animation: blinker 0.5s alternate;
 }
 
 .item:active {
@@ -37,7 +37,7 @@ body {
 }
 
 @keyframes blinker { 
-  to { background-color: yellow; } 
+  to { background-color: yellow !important; } 
 }
 
 

@@ -103,21 +103,29 @@ function reloadAll() {
     for (var i = 0; i < items.length; i++) {
         cost += items[i][3]
     }
+
+    // balance of day
     document.getElementById("total").textContent = "Day's total: " + formatter.format(cost)
 
     // download setup
     let csvContent = "data:text/csv;charset=utf-8,";
-    items.forEach(function(rowArray) {
-        let row = rowArray.join(",");
-        csvContent += row + "\r\n";
-    });
+    for (var i = 0; i < items.length; i++) {
+        csvContent += items[i][0] + "," + items[i][3] + "\r\n"
+    }
     let encodedUri = encodeURI(csvContent);
     let link = document.getElementById("download")
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "my_data.csv");
+    link.setAttribute("download", "JC_" + today + ".csv");
 }
 
 
 document.getElementById("pcheckout").addEventListener("click", checkout);
 reloadAll()
+
+var today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
 

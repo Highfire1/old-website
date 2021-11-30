@@ -109,3 +109,12 @@ function reloadAll() {
 
 document.getElementById("pcheckout").addEventListener("click", checkout);
 reloadAll()
+
+
+let csvContent = "data:text/csv;charset=utf-8,";
+rows.forEach(function(items) {
+    let row = items.join(",");
+    csvContent += row + "\r\n";
+});
+var encodedUri = encodeURI(csvContent);
+window.open(encodedUri);

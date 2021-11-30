@@ -110,11 +110,19 @@ function reloadAll() {
 document.getElementById("pcheckout").addEventListener("click", checkout);
 reloadAll()
 
+document.getElementById("download").addEventListener("click", function() {
+    // Thanks, stackoverflow
+    let csvContent = "data:text/csv;charset=utf-8,";
+    items.forEach(function(rowArray) {
+        let row = rowArray.join(",");
+        csvContent += row + "\r\n";
+    });
+    let encodedUri = encodeURI(csvContent);
+    let link = document.getElementById("download")
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "my_data.csv");
+    document.body.appendChild(link); // Required for FF
 
-let csvContent = "data:text/csv;charset=utf-8,";
-items.forEach(function(rowArray) {
-    let row = rowArray.join(",");
-    csvContent += row + "\r\n";
-});
-var encodedUri = encodeURI(csvContent);
-window.open(encodedUri);
+    link.click(); // This will download the data file named "my_data.csv".
+})
+

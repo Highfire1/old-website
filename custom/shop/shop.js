@@ -104,15 +104,8 @@ function reloadAll() {
         cost += items[i][3]
     }
     document.getElementById("total").textContent = "Day's total: " + formatter.format(cost)
-}
 
-
-document.getElementById("pcheckout").addEventListener("click", checkout);
-reloadAll()
-
-// download setup
-document.getElementById("download").addEventListener("click", function() {
-    // Thanks, stackoverflow
+    // download setup
     let csvContent = "data:text/csv;charset=utf-8,";
     items.forEach(function(rowArray) {
         let row = rowArray.join(",");
@@ -122,5 +115,9 @@ document.getElementById("download").addEventListener("click", function() {
     let link = document.getElementById("download")
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", "my_data.csv");
-})
+}
+
+
+document.getElementById("pcheckout").addEventListener("click", checkout);
+reloadAll()
 

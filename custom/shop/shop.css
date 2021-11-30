@@ -24,6 +24,21 @@ body {
   margin: 10px;
 }
 
+.item:hover {
+  background-color: yellow;
+}
+
+.item:active {
+  animation: blinker 1s;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 #wrapper {
   display: flex;
 }

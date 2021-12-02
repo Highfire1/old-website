@@ -15,6 +15,7 @@ posts = [
     {"five themes of geography" : "posts/post14.html"},
     {"Cloud Seeding." : "./custom/seed/seed.html"},
     {"testing..." : "./custom/shop/shop.html"},
+    {"BINGO" : "./custom/bingo/bingo.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

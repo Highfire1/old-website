@@ -42,9 +42,9 @@ function reloadGrid() {
         
         div.id = i;
         div.addEventListener("click", function() {
-        items[this.id][4] += 1
-        reloadAll()
-        //item.textContent = items[this.id][0] + " | $" + items[this.id][2] + " | " + items[this.id][3]
+            items[this.id][4] += 1
+            reloadAll()
+            //item.textContent = items[this.id][0] + " | $" + items[this.id][2] + " | " + items[this.id][3]
         })
 
         div.classList.add("item")
@@ -71,6 +71,10 @@ function reloadCart() {
         item.textContent = items[i][0] + " " + items[i][4]
 
         item.classList.add("item")
+        item.addEventListener("click", function() {
+            items[this.id][4] -= 1
+            reloadAll()
+        })
         newcart.appendChild(item)
         
         cost += items[i][2] * items[i][4]
@@ -99,9 +103,29 @@ function reloadAll() {
     for (var i = 0; i < items.length; i++) {
         cost += items[i][3]
     }
+
+    // balance of day
     document.getElementById("total").textContent = "Day's total: " + formatter.format(cost)
+
+    // download setup
+    let csvContent = "data:text/csv;charset=utf-8,";
+    for (var i = 0; i < items.length; i++) {
+        csvContent += items[i][0] + "," + items[i][3] + "\r\n"
+    }
+    let encodedUri = encodeURI(csvContent);
+    let link = document.getElementById("download")
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "JC_" + today + ".csv");
 }
 
 
 document.getElementById("pcheckout").addEventListener("click", checkout);
+
+var today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
 reloadAll()

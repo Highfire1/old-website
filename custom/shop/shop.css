@@ -24,6 +24,25 @@ body {
   margin: 10px;
 }
 
+
+.item:focus {
+  animation: beat 1s ease-in-out backwards
+}
+
+.item:active {
+  animation: none;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+  }
+}
+
+
 #wrapper {
   display: flex;
 }
@@ -66,3 +85,8 @@ img {
   max-width: 100%;
   max-height: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+

@@ -78,22 +78,9 @@ function magic() {
 populateSidebar()
 
 
-function populatePost(url) {
-    //document.getElementById("content").innerHTML = <link rel="import" href="http://example.com/elements.html">
-
-    xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4 && xhr.status == 200) {
-            document.getElementById('postcontent').innerHTML = xhr.responseText;
-        }
-    }
-    xhr.open('GET', url, true);
-    xhr.send();
-    
-    //let postContent = document.getElementById("postcontent")
-    //postContent.src = url
-
-
+function populatePost(url) {    
+    let postContent = document.getElementById("postcontent")
+    postContent.src = url
 }
 
 populatePost("posts/post1.html")

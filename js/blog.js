@@ -79,8 +79,19 @@ populateSidebar()
 
 
 function populatePost(url) {
-    let postContent = document.getElementById("postcontent")
-    postContent.src = url
+    //document.getElementById("content").innerHTML = <link rel="import" href="http://example.com/elements.html">
+
+    xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4 && xhr.status == 200) {
+            document.getElementById('content').innerHTML = xhr.responseText;
+        }
+    }
+    xhr.open('GET', url, true);
+    xhr.send();
+    
+    //let postContent = document.getElementById("postcontent")
+    //postContent.src = url
 
 
 }

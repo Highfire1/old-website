@@ -16,6 +16,7 @@ posts = [
     {"Cloud Seeding." : "./custom/seed/seed.html"},
     {"testing..." : "./custom/shop/shop.html"},
     {"BINGO" : "./custom/bingo/bingo.html"},
+    {"John Oliver Update" : "posts/post15.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

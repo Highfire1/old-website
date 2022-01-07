@@ -1,9 +1,12 @@
 <!doctype html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
     <title>Anderson's Website</title>
     <meta name="description" content="description">
@@ -11,29 +14,19 @@
 
     <link rel="icon" src="/favicon.ico">
 
-    <link rel="stylesheet" href="css/blog.css">
-    <link rel="stylesheet" href="css/lighttheme.css">
-    <link rel="stylesheet" href="css/darktheme.css">
+    <link rel="stylesheet" href="css/blog.css">    
 </head>
 
 <body>
-    <div id="header">
-        <p id="headertext">
-            <ppp>&nbsp;</ppp>
-            <img id="toggleSidebar" src="assets/collapse.png" width = "20" height = "20"></img>
-            <ppp id="blogname">You are at Anderson's blog.</ppp>
-            <img id="toggleTheme" src="assets/togglecss.png" width = "20" height = "20"></img>
-        </p>
-    </div>
     <div id="content">
-        <div id="sidebar"></div>
-        <iframe id="postcontent" frameBorder="0" ></iframe>
+        <div>
+            <div id="sidebar"></div>
+            <img id="toggleSidebar" src="assets/collapse.png" width = "20" height = "20"></img>
+        </div>
+
+        <embed id="postcontent" frameBorder="0" ></embed>
     </div>
     
-
-
-
-    <!-- your content here... -->
     <script src="js/blog.js"></script>
 </body>
 

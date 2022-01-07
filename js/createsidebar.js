@@ -1,3 +1,12 @@
+function createSidebar() {
+    console.log("Creating sidebar")
+
+    let bar = document.createElement("div")
+    bar.id = "sidebar"
+
+    document.body.prepend(bar)
+}
+
 // ADD NEW POSTS HERE
 posts = [
     {"Welcome!": "posts/post1.html"},
@@ -18,8 +27,8 @@ posts = [
     {"BINGO" : "./custom/bingo/bingo.html"},
 ]
 
-let button = document.getElementById("toggleSidebar")
-button.addEventListener("click", toggleSidebar)
+//let button = document.getElementById("toggleSidebar")
+//button.addEventListener("click", toggleSidebar)
 
 
 function toggleSidebar() {
@@ -42,8 +51,6 @@ function toggleSidebar() {
 }
 
 
-
-
 function populateSidebar() {
     let sidebar = document.getElementById("sidebar")
 
@@ -57,11 +64,13 @@ function populateSidebar() {
         post.classList.add("postTitle")
 
         post.addEventListener("click", function() {
-            populatePost(post.id)
+            let cururl = window.location.href
+            cururl = cururl.slice(0, cururl.lastIndexOf("/posts"))
 
-            if(post.id == "./custom/seed/seed.html") {
-                toggleSidebar()
-            } 
+            console.log(cururl)
+            console.log(post.id)
+
+            window.location.href = cururl + "/" + post.id
         })
 
         sidebar.append(post)
@@ -69,23 +78,11 @@ function populateSidebar() {
 }
 
 
-function populatePost(url) {    
-    let postContent = document.getElementById("postcontent")
-    postContent.setAttribute("type", "text/html")
-    postContent.innerHTML = getPost(url)
-}
-
-function getPost(url) {
-    var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-    xhr.open('get', url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) { 
-            return xhr.responseText;
-        } 
-    }
-    xhr.send();
-}
 
 
-populateSidebar()
-populatePost("posts/post1.html")
+
+
+window.onload = (event) => {
+    createSidebar() 
+    populateSidebar()
+};

@@ -16,7 +16,6 @@ posts = [
     {"Cloud Seeding." : "./custom/seed/seed.html"},
     {"testing..." : "./custom/shop/shop.html"},
     {"BINGO" : "./custom/bingo/bingo.html"},
-    {"John Oliver Update" : "posts/post15.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")
@@ -73,18 +72,8 @@ function populateSidebar() {
 function populatePost(url) {    
     let postContent = document.getElementById("postcontent")
     postContent.setAttribute("type", "text/html")
-    postContent.innerHTML = getPost(url)
-}
-
-function getPost(url) {
-    var xhr = typeof XMLHttpRequest != 'undefined' ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
-    xhr.open('get', url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) { 
-            return xhr.responseText;
-        } 
-    }
-    xhr.send();
+    //postContent.innerHTML = getPost(url)
+    postContent.src = url
 }
 
 

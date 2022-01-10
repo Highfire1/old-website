@@ -17,6 +17,7 @@ posts = [
     {"testing..." : "./custom/shop/shop.html"},
     {"BINGO" : "./custom/bingo/bingo.html"},
     {"John Oliver Update" : "posts/post15.html"},
+    {"My thoughts on energy" : "posts/post16.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

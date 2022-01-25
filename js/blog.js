@@ -20,6 +20,7 @@ posts = [
     {"My thoughts on energy" : "posts/post16.html"},
     {"Geographic event!" : "posts/post17.html"},
     {"Another geographic event!" : "posts/post18.html"},
+    {"Yet Another geographic event!" : "posts/post19.html"},
 ]
 
 let button = document.getElementById("toggleSidebar")

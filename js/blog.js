@@ -52,16 +52,21 @@ function toggleSidebar() {
 function populateSidebar() {
     let sidebar = document.getElementById("sidebar")
 
+
     for (var i = posts.length - 1; i >= 0; i--) {
         let postName = Object.keys(posts[i])
         let postLink = Object.values(posts[i])
 
+        let postcontainer = document.createElement("div")
         let post = document.createElement("a")
+
         post.textContent = postName
         post.id = postLink
         post.classList.add("postTitle")
 
-        post.addEventListener("click", function() {
+        postcontainer.appendChild(post)
+
+        postcontainer.addEventListener("click", function() {
             populatePost(post.id)
 
             if(post.id == "./custom/seed/seed.html") {
@@ -69,7 +74,7 @@ function populateSidebar() {
             } 
         })
 
-        sidebar.append(post)
+        sidebar.append(postcontainer)
     }
 }
 

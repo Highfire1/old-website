@@ -35,7 +35,7 @@ h3 {
 }
 
 #projectGrid a {
-    width: clamp(400px, 500px, 48%);
+    width: clamp(450px, 48%, 48%);
     border-radius: 5px;
 
     display: flex;

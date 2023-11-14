@@ -1,3 +1,39 @@
+var blogPosts = [
+    {title: "Welcome", date: "September 7, 2021", link: "blog/welcome.html"},
+    {title: "Cloud Seeding in British Columbia", date: "November 21, 2021", link: "blog/cloud-seeding.html"},
+    {title: "My position on nuclear power", date: "January 10, 2022", link: "blog/nuclear-power.html"},
+];
+
+blogPosts = blogPosts.reverse()
+
+// Function to create and populate the grid
+function populateBlogGrid() {
+    var gridContainer = document.getElementById("blogGrid")
+
+    // Loop through blog posts and create elements
+    blogPosts.forEach(function(post) {
+        var titleElement = document.createElement("a")
+        titleElement.href = post.link
+        titleElement.classList.add("post-title")
+        titleElement.textContent = post.title
+
+        var dateElement = document.createElement("p")
+        dateElement.classList.add("post-date")
+        dateElement.textContent = post.date;
+
+        gridContainer.appendChild(titleElement)
+        gridContainer.appendChild(dateElement)
+    });
+}
+
+// Call the function to populate the grid
+populateBlogGrid();
+
+
+
+
+
+
 // ADD NEW POSTS HERE
 posts = [
     {"Welcome!": "posts/post1.html"},
@@ -86,5 +122,5 @@ function populatePost(url) {
 }
 
 
-populateSidebar()
-populatePost("posts/post1.html")
+//populateSidebar()
+//populatePost("posts/post1.html")

@@ -14,7 +14,7 @@ body {
     color: black;
     background-color: rgb(243, 243, 243);
 
-    animation: fadeIn 5s forwards;
+    animation: fadeIn 0s forwards; /* set back to 5s if you want to re-enable */
   }
 
 h1 {

@@ -1,33 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-    <title>Anderson's Website</title>
-    <meta name="description" content="description">
+    <title>Anderson Tseng</title>
+    <meta name="description" content="Anderson Tseng's website.">
     <meta name="author" content="Anderson Tseng">
 
     <link rel="icon" src="/favicon.ico">
 
-    <link rel="stylesheet" href="css/blog.css">    
+    <link rel="stylesheet" href="css/index.css">    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PFW116ELQN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PFW116ELQN');
+    </script>
 </head>
 
 <body>
-    <div id="content">
-        <div id="leftbar">
-            <img id="toggleSidebar" src="assets/collapse.png" width = "20" height = "20"></img>
-            <div id="sidebar"></div>
-        </div>
+    <header>
+        <a href="/"><img src="assets/sunrise.jpg" width="100%" height="200px" class="img_cover"></a>
+        <h1>You have reached the website of Anderson Tseng</h1>
+        <h3>just another computer science student </h2>
+        <p>Vocaloid fan, reader of manga, murderer of frenchmen, professional ranter, amateur speedrunner, hackathon organizer, robot part vandalizer, comp sci club pres and aspiring cloud photographer.</p>
+    </header>
 
-        <embed id="postcontent" frameBorder="0" ></embed>
-    </div>
     
+    <h2>Blog</h2>
+    <div class="grid-container" id="blogGrid"></div>
     <script src="js/blog.js"></script>
-</body>
 
+
+    <footer>
+        <img src="assets/hesinyourwalls.png" class="hidden">
+        <div id="links">
+            <a href="blog">Blog</a>
+            <a href="https://www.linkedin.com/in/andersontseng/">LinkedIn</a>
+            <a href="https://www.instagram.com/anderson_wootdidoo/">Instagram</a>
+            <a href="https://github.com/highfire1">Github</a>
+            <a href="https://devpost.com/Highfire1">Devpost</a>
+        </div>
+    </footer>
+
+
+    
+</body>
 </html>

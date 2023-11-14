@@ -1,7 +1,7 @@
 var blogPosts = [
-    {title: "Welcome", date: "September 7, 2021", link: "blog/welcome.html"},
-    {title: "Cloud Seeding in British Columbia", date: "November 21, 2021", link: "blog/cloud-seeding.html"},
-    {title: "My position on nuclear power", date: "January 10, 2022", link: "blog/nuclear-power.html"},
+    {title: "Welcome", date: "September 7, 2021", link: "blog/welcome"},
+    {title: "Cloud Seeding in British Columbia", date: "November 21, 2021", link: "blog/cloud-seeding"},
+    {title: "My position on nuclear power", date: "January 10, 2022", link: "blog/nuclear-power"},
 ];
 
 blogPosts = blogPosts.reverse()
@@ -58,9 +58,6 @@ posts = [
     {"Another geographic event!" : "posts/post18.html"},
     {"Yet Another geographic event!" : "posts/post19.html"},
 ]
-
-let button = document.getElementById("toggleSidebar")
-button.addEventListener("click", toggleSidebar)
 
 
 function toggleSidebar() {

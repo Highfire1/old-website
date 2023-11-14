@@ -4,6 +4,7 @@ html {
 
 p {
     margin: 0;
+    font-size: medium;
 }
 
 body {
@@ -45,7 +46,7 @@ h3 {
     border-width: 1px;
     border-style: solid;
 
-    background-color: beige;
+    background-color: rgb(210, 210, 210);
 
     display: flex;
     gap: 5px;
@@ -80,13 +81,15 @@ a {
     
 }
 
-/*
-
-#projectGrid >:hover {
-    transition: background 0.5s;
-    background-color: rgb(42, 42, 42);
+#projectGrid > a {
+    transition: background-color 0.5s, transform 0.5s;
 }
-*/
+
+#projectGrid > a:hover {
+    background-color: rgb(140, 140, 140);
+    transform: scale(1.05);
+}
+
 
 img {
     width: 100%;
@@ -130,4 +133,8 @@ footer > * {
 
 .post-date {
     text-align: right;
+}
+
+header {
+    padding-bottom: 20px;
 }

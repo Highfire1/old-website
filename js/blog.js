@@ -2,6 +2,7 @@ var blogPosts = [
     {title: "Welcome", date: "September 7, 2021", link: "blog/welcome"},
     {title: "Cloud Seeding in British Columbia", date: "November 21, 2021", link: "blog/cloud-seeding"},
     {title: "My position on nuclear power", date: "January 10, 2022", link: "blog/nuclear-power"},
+    {title: "City of Vancouver Earthquake Map", date: "April 10, 2024", link: "block/earthquake-map"}
 ];
 
 blogPosts = blogPosts.reverse()

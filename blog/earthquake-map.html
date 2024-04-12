@@ -37,14 +37,17 @@
             z-index: 10;
             resize: horizontal;
             overflow: hidden;
-            overflow-x: visible;
             width: 25vw;
-            border: 4px solid black;
+            height: min-content;
 
         }
 
         #legend-container > * {
             width: 100%;
+            position: relative;
+            bottom:-3px
+            ;
+
 
         }
 
@@ -77,15 +80,21 @@ const mapImage = document.getElementById('mapImage');
 const container = document.getElementById('image-container');
 
 zoomSlider.addEventListener('input', function() {
-    const scale = parseFloat(this.value);
-    const previousHeight = mapImage.offsetHeight;
+    const scale = parseFloat(this.value)
+    const previousHeight = mapImage.offsetHeight
+    const previousWidth = mapImage.offsetWidth
+
     // Adjust image height based on scale
-    mapImage.style.height = `${scale * 100}%`;
-    const newHeight = mapImage.offsetHeight;
+    mapImage.style.height = `${scale * 100}%`
+    const newHeight = mapImage.offsetHeight
+    const newWidth = mapImage.offsetWidth
 
     // Adjust the scroll to zoom towards the center of the viewport
-    const deltaY = (newHeight - previousHeight) / 2;
-    container.scrollTop += deltaY;
+    const deltaY = (newHeight - previousHeight) / 2
+    container.scrollTop += deltaY
+
+    const deltaX = (newWidth - previousWidth) / 2
+    container.scrollLeft += deltaX
 });
 </script>
 

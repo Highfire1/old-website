@@ -7,10 +7,10 @@
 <h3 id="when-i-tested-the-vpn-100-">When I Tested the VPN (100)</h3>
 <p>The flag is provided when you load the test page through the VPN connection.</p>
 <h3 id="voter-emailer-1-100-">Voter Emailer 1 (100)</h3>
-<p>FastAPI has 3 special routes: <code>/docs/</code>, <code>/redoc/</code>, and <code>/openapi.json</code>. You can find all routes of the API by accessing any of those pages.</p>
+<p>FastAPI has 3 special routes: <code>/docs</code>, <code>/redoc</code>, and <code>/openapi.json</code>. You can find all routes of the API by accessing any of those pages.</p>
 <h3 id="chatbot-1-884-">Chatbot 1 (884)</h3>
 <p>Did not finish. It appeared that Llama was returning completely random names when asked who the current candidates were. As well, the database call for candidates needed to be changed from <code>candidate=&#39;true&#39;</code> to <code>candidate=&#39;True&#39;</code>.</p>
-<p>For this and the following challenges, I used Remote-SSH with VSCode on my windows 11 environment, which was more comfortable for me to test and debug with.</p>
+<p>For this and the following challenges, I used Remote-SSH with VSCode on my Windows 11 environment, which was more comfortable for me to test and debug with.</p>
 <h3 id="chatbot-2-949-">Chatbot 2 (949)</h3>
-<p>When users send a message, they send it in the form &quot;RandomName9000 : what is my email?`. There is also a session token that is set which is the user&#39;s username in base64. Some calls would send a message with one user in the message, and a completely different message in the session cookie. 
+<p>When users send a message, they send it in the form <code>&quot;RandomName9000 : what is my email?`</code>. There is also a session token that is set which is the user&#39;s username in base64. Some calls would send a message with one user in the message, and a completely different message in the session cookie. 
 This can be fixed by checking for usernames in the message and replacing it with the real username, which is the session token decoded with base64.</p>
